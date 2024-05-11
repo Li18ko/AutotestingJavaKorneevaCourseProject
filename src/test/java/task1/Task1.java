@@ -1,12 +1,6 @@
 package task1;
 
-import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import task1.BaseTests;
-import task1.StartPage;
-import task1.managers.DriverManager;
 
 public class Task1 extends BaseTests {
 

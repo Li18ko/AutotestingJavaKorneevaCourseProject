@@ -1,4 +1,4 @@
-package task1;
+package task1.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;

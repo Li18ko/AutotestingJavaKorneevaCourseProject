@@ -1,7 +1,6 @@
 package task1.managers;
 
-import org.openqa.selenium.WebDriver;
-import task1.StartPage;
+import task1.pages.StartPage;
 
 public class PageManager {
     private static PageManager INSTANCE = null;
