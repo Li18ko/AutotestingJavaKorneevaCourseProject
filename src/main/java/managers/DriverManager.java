@@ -1,8 +1,8 @@
-package task1.managers;
+package managers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import task1.utils.PropsConst;
+import utils.PropsConst;
 
 import java.util.concurrent.TimeUnit;
 

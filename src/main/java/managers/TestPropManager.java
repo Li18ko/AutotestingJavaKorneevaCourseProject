@@ -1,4 +1,4 @@
-package task1.managers;
+package managers;
 
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -2,13 +2,11 @@ package task1.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import task1.managers.DriverManager;
-import task1.managers.PageManager;
+import managers.DriverManager;
 
 import java.time.Duration;
 

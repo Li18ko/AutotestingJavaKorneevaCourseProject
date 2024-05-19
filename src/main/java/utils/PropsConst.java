@@ -1,4 +1,4 @@
-package task1.utils;
+package utils;
 
 public class PropsConst {
     public static final String BASE_URL = "base.url";

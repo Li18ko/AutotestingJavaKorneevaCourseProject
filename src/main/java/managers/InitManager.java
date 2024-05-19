@@ -1,8 +1,8 @@
-package task1.managers;
+package managers;
 
 import java.util.concurrent.TimeUnit;
 
-import static task1.utils.PropsConst.*;
+import static utils.PropsConst.*;
 
 public class InitManager {
     private static final TestPropManager props = TestPropManager.getInstance();

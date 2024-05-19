@@ -1,11 +1,8 @@
-package task1.managers;
-
-import task1.pages.StartPage;
+package task1.pages;
 
 public class PageManager {
     private static PageManager INSTANCE = null;
     private StartPage startPage;
-
     private PageManager(){
 
     }
@@ -17,10 +14,11 @@ public class PageManager {
         return INSTANCE;
     }
 
-    public StartPage getStartPage(){
+    public StartPage getStartPage() {
         if (startPage == null){
             startPage = new StartPage();
         }
         return startPage;
     }
+
 }

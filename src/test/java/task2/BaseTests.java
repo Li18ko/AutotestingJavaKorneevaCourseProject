@@ -1,12 +1,12 @@
-package task1;
+package task2;
 
+import managers.InitManager;
+import task2.pages.PageManager;
+import managers.TestPropManager;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import managers.DriverManager;
-import managers.InitManager;
-import managers.TestPropManager;
-import task1.pages.PageManager;
 import utils.PropsConst;
 
 public class BaseTests {
@@ -22,7 +22,7 @@ public class BaseTests {
 
     @Before
     public void before(){
-        driverManager.getDriver().get("https://lambdatest.github.io/sample-todo-app/");
+        driverManager.getDriver().get("https://mospolytech.ru/");
     }
 
     @AfterClass

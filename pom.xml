@@ -124,7 +124,7 @@
                     <properties>
                         <property>
                             <name>listener</name>
-                            <value>task1.utils.MyAllureListener</value>
+                            <value>utils.MyAllureListener</value>
                         </property>
                     </properties>
                     <systemPropertyVariables>
