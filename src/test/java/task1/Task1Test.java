@@ -2,7 +2,7 @@ package task1;
 
 import org.junit.Test;
 
-public class Task1 extends BaseTests {
+public class Task1Test extends BaseTests {
 
     @Test
     public void test(){
