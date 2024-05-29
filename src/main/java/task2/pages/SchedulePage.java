@@ -21,6 +21,11 @@ public class SchedulePage extends BasePage {
 
     @Step("Проверка перехода на страницу расписания")
     public SchedulePage checkOpenShedulePage() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         Assert.assertTrue("Заголовок Расписания не найден", title.isDisplayed() &&
             title.getText().contains("Расписания"));
         logger.info("Нужный заголовок присутствует на странице");
