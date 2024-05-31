@@ -75,7 +75,7 @@ public class PhonePage extends BasePage{
                 allContainSamsung = true;
             }
             Assert.assertTrue("Название товара не содержит 'Samsung': " + productName, allContainSamsung);
-            logger.info("Все товары содержат 'Samsung'");
+            logger.info("Название товара содержит 'Samsung'");
         }
         return pageManager.getPhonePage();
     }
