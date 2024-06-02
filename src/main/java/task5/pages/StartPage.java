@@ -15,7 +15,7 @@ public class StartPage extends BasePage{
 
     private static final Logger logger = Logger.getLogger(StartPage.class);
 
-    @FindBy(xpath = "/html/body/div[1]/main/div/h2[1]")
+    @FindBy(xpath = "//h2[contains(text(), 'Test your front-end against a real API')]")
     private WebElement title;
 
     @FindBy(xpath = "//li[@data-id]")

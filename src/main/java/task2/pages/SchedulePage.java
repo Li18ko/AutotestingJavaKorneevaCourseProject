@@ -10,13 +10,13 @@ import org.apache.log4j.Logger;
 public class SchedulePage extends BasePage {
     private static final Logger logger = Logger.getLogger(SchedulePage.class);
 
-    @FindBy(xpath = "//*[@id='bx_2015423015_2810']/div[2]/div/h1")
+    @FindBy(xpath = "//h1")
     private WebElement title;
 
-    @FindBy(xpath = "//*[@id='bx_3777608605_2811']/div[3]/div/div[1]/a")
+    @FindBy(xpath = "//*[@id='bx_3777608605_2811']//a[@href='https://rasp.dmami.ru/']")
     private WebElement viewSchedule;
 
-    @FindBy(xpath = "//*[@id='bx_3777608605_2811']/div[1]")
+    @FindBy(xpath = "//div[@class='entry-step__title h2 animate' and text()='Расписание занятий']")
     private WebElement h1Schedule;
 
     @Step("Проверка перехода на страницу расписания")

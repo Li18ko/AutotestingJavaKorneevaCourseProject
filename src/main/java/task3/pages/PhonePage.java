@@ -12,12 +12,12 @@ import java.util.List;
 public class PhonePage extends BasePage{
     private static final Logger logger = Logger.getLogger(PhonePage.class);
 
-    @FindBy(xpath = "//*[@id='/content/page/fancyPage/cms/1/SearchTitleWithBreadcrumbs-SearchTitleWithBreadcrumbs']/div/div/div/h1")
+    @FindBy(xpath = "//h1[@data-auto='title']")
     private WebElement title;
 
     @FindBy(xpath = "//div[@data-auto-themename='listDetailed']")
     private List<WebElement> phoneList;
-    @FindBy(xpath = "//h4[@class='_1JK_x _6tyDq _1ea6I']")
+    @FindBy(xpath = "//h4[text()='Производитель']")
     private WebElement titleManufacturer;
 
     @FindBy(xpath = "//div[@data-filter-value-id='153061']//label")

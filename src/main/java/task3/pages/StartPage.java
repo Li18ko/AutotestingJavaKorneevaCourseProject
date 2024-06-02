@@ -15,10 +15,10 @@ public class StartPage extends BasePage{
     @FindBy(xpath = "//meta[@property='og:url']")
     private WebElement urlPage;
 
-    @FindBy(xpath = "/html/body/div[1]/div/div[2]/div[2]/div/header/div[1]/div/div/noindex[1]/div/div/button/span")
+    @FindBy(xpath = "//span[text()='Каталог']")
     private WebElement catalog;
 
-    @FindBy(xpath = "/html/body/div[7]")
+    @FindBy(xpath = "//div[@role='dialog']")
     private WebElement catalogOpen;
 
     @FindBy(xpath = "//li[@data-zone-name='category-link']")
@@ -26,9 +26,6 @@ public class StartPage extends BasePage{
 
     @FindBy(xpath = "//ul[@data-autotest-id]//li//a")
     private List<WebElement> categoryItem;
-
-    @FindBy(xpath = "//*[@id='/MarketNodeHeaderCatalog43/119976441/119976448']/div/div/div/div/div/a")
-    private WebElement gaming;
 
     @Step(value = "Проверяем открылась ли главная страница")
     public StartPage checkOpenMainPage() {

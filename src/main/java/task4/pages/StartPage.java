@@ -18,25 +18,25 @@ public class StartPage extends BasePage{
     @FindBy(xpath = "//meta[@property='og:url']")
     private WebElement urlPage;
 
-    @FindBy(xpath = "/html/body/div[1]/header/div/div[2]/div[1]/button")
+    @FindBy(xpath = "//button[@data-wba-header-name='Catalog']")
     private WebElement burger;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]")
+    @FindBy(xpath = "//div[@class='menu-burger__main j-menu-burger-main j-menu-active']")
     private WebElement menu;
 
     @FindBy(xpath = "//ul[@class='menu-burger__main-list']//a")
     private List<WebElement> catalogList;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div/div[12]/div/div[1]/div/a")
+    @FindBy(xpath = "//div[@data-menu-id='62827']//a[@class='menu-burger__title-link j-menu-drop-link']")
     private WebElement h1Section;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div/div[12]/div/div[1]/ul/li[3]/span")
+    @FindBy(xpath = "//div[@data-menu-id='62827']//span[text()='Диваны и кресла']")
     private WebElement sofasAndArmchairs;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div/div[12]/div/div[2]/div[2]/div/a")
+    @FindBy(xpath = "//div[@data-menu-id='62827']//a[@class='menu-burger__title-link j-menu-drop-link' and text()='Диваны и кресла']")
     private WebElement h1SubSection;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div/div[11]/div/div[2]/div[2]/ul/li[1]/a")
+    @FindBy(xpath = "//div[@data-menu-id='62827']//a[@class='menu-burger__link j-menu-drop-link' and text()='Диваны']")
 
     private WebElement sofas;
 

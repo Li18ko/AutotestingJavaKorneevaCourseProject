@@ -12,10 +12,10 @@ public class ClassSchedulePage extends BasePage {
 
     private static final Logger logger = Logger.getLogger(ClassSchedulePage.class);
 
-    @FindBy(xpath = "/html/body/div/div[1]/div[1]/h4")
+    @FindBy(xpath = "//h4")
     private WebElement title;
 
-    @FindBy(xpath = "/html/body/div/div[1]/div[1]/div[3]/input[1]")
+    @FindBy(xpath = "//input[@type='text' and @class='groups' and @placeholder='группа ...']")
     private WebElement input;
 
     @FindBy(xpath = "//div[@class='found-groups row not-print']/div[@id='221-361']")

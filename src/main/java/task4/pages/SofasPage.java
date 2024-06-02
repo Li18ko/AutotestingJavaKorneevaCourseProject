@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class SofasPage extends BasePage {
     private static final Logger logger = Logger.getLogger(SofasPage.class);
 
-    @FindBy(xpath = "//*[@id=\"catalog\"]/div[2]/h1")
+    @FindBy(xpath = "//h1")
     private WebElement title;
 
     @FindBy(xpath = "//div[@class='product-card__wrapper']")
