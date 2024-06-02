@@ -27,16 +27,17 @@ public class StartPage extends BasePage{
     @FindBy(xpath = "//ul[@class='menu-burger__main-list']//a")
     private List<WebElement> catalogList;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div/div[11]/div/div[1]/div/a")
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div/div[12]/div/div[1]/div/a")
     private WebElement h1Section;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div/div[11]/div/div[1]/ul/li[3]/span")
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div/div[12]/div/div[1]/ul/li[3]/span")
     private WebElement sofasAndArmchairs;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div/div[11]/div/div[2]/div[2]/div/a")
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div/div[12]/div/div[2]/div[2]/div/a")
     private WebElement h1SubSection;
 
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[3]/div/div[11]/div/div[2]/div[2]/ul/li[1]/a")
+
     private WebElement sofas;
 
     @Step(value = "Проверяем открылась ли главная страница")

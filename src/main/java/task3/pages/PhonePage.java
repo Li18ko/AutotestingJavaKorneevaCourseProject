@@ -59,6 +59,11 @@ public class PhonePage extends BasePage{
         waitUntilElementToBeVisible(specificManufacturer).click();
         moveToElement(specificManufacturer);
         logger.info("Производитель в фильтрах выбран");
+        try {
+            Thread.sleep(2500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         for(int i = 0; i < 7 && i < phoneList.size(); i++){
             try {
                 Thread.sleep(2500);

@@ -12,7 +12,8 @@ public class Task4Test extends BaseTests {
                 .goSofasPage();
         pageManager.getSofasPage().checkOpenSofasPage("Диваны")
                 .checkProducts(5)
-                .ascOrderPrice();
+                .ascOrderPrice()
+                .checkPriceProducts(5);
 
         try{
             Thread.sleep(5000);

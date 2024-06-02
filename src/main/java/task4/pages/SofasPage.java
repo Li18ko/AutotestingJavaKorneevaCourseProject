@@ -7,7 +7,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SofasPage extends BasePage {
     private static final Logger logger = Logger.getLogger(SofasPage.class);
@@ -18,11 +20,18 @@ public class SofasPage extends BasePage {
     @FindBy(xpath = "//div[@class='product-card__wrapper']")
     private List<WebElement> sofasList;
 
-    @FindBy(xpath = "/html/body/div[1]/div/div")
-    private WebElement filter;
+    @FindBy(xpath = "//button[contains(@class, 'dropdown-filter__btn dropdown-filter__btn--sorter')]")
+    private WebElement filterSort;
 
-    @FindBy(xpath = "/html/body/div[1]/div/div//h3[@class='filters-desktop__title']")
-    private WebElement h3Filter;
+    @FindBy(xpath = "//div[@class='filter' and contains(@data-link, 'updateSort')]")
+    private WebElement filterSortContainer;
+
+    @FindBy(xpath = "//li[contains(@class, 'filter__item j-catalog-sort') and .//span[text()='По возрастанию цены']]")
+    private WebElement filterSortAscPrice;
+
+    @FindBy(xpath = "//div[@class='dropdown-filter']//button[@class='dropdown-filter__btn dropdown-filter__btn--sorter']")
+    private WebElement filterSortAfter;
+
 
 
     @Step("Проверка перехода на страницу 'Диваны'")
@@ -70,14 +79,49 @@ public class SofasPage extends BasePage {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        clickJS(filter);
+        filterSort.click();
         try {
             Thread.sleep(1500);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        Assert.assertTrue("Контейнер фильтров не раскрылся", h3Filter.isDisplayed());
-        logger.info("Раскрыли контейнер фильтров");
+        Assert.assertTrue("Контейнер сортировки не раскрылся", filterSortContainer.isDisplayed());
+        logger.info("Раскрыли контейнер сортировки");
+
+        filterSortAscPrice.click();
+        Assert.assertTrue("Сортировка цены не выбрана 'По возрастанию цены'", filterSortAfter.getText().contains("По возрастанию цены"));
+        logger.info("Сортировка товаров по возрастанию цены установлена");
+
+        return pageManager.getSofasPage();
+    }
+
+    public SofasPage checkPriceProducts(int number) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        List<Integer> prices = new ArrayList<>();
+
+        for(int i = 0; i < number; i++){
+            WebElement product = sofasList.get(i);
+            moveToElement(product);
+
+            String productName = product.findElement(By.xpath(".//h2[@class='product-card__brand-wrap']")).getText();
+            String productPriceStr = product.findElement(By.xpath(".//p[@class='product-card__price price']//ins[@class='price__lower-price wallet-price']")).getText();
+            productPriceStr = productPriceStr.replaceAll("[^0-9]", "");
+            int productPrice = Integer.parseInt(productPriceStr);
+
+            prices.add(productPrice);
+            Assert.assertTrue("Товар '" + (i + 1) + "' не найден", product.isDisplayed());
+            logger.info("Название: " + productName + ". Цена: " + productPrice + ".");
+        }
+
+        List<Integer> sortedPrices = prices.stream().sorted().collect(Collectors.toList());
+        Assert.assertEquals("Цены не отсортированы по возрастанию", sortedPrices, prices);
+        logger.info("Цены отсортированы по возрастанию, сортировка работает");
+
         return pageManager.getSofasPage();
     }
 }
