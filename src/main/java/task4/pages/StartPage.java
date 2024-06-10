@@ -24,19 +24,19 @@ public class StartPage extends BasePage{
     @FindBy(xpath = "//div[@class='menu-burger__main j-menu-burger-main j-menu-active']")
     private WebElement menu;
 
-    @FindBy(xpath = "//ul[@class='menu-burger__main-list']//a")
+    @FindBy(xpath = "//ul[@class='menu-burger__main-list']//span")
     private List<WebElement> catalogList;
 
-    @FindBy(xpath = "//div[@data-menu-id='62827']//a[@class='menu-burger__title-link j-menu-drop-link']")
+    @FindBy(xpath = "//div[@data-menu-id='62827']//span[@class='menu-burger__title-name']")
     private WebElement h1Section;
 
     @FindBy(xpath = "//div[@data-menu-id='62827']//span[text()='Диваны и кресла']")
     private WebElement sofasAndArmchairs;
 
-    @FindBy(xpath = "//div[@data-menu-id='62827']//a[@class='menu-burger__title-link j-menu-drop-link' and text()='Диваны и кресла']")
+    @FindBy(xpath = "//div[@data-menu-id='62827']//span[@class='menu-burger__title-name' and text()='Диваны и кресла']")
     private WebElement h1SubSection;
 
-    @FindBy(xpath = "//div[@data-menu-id='62827']//a[@class='menu-burger__link j-menu-drop-link' and text()='Диваны']")
+    @FindBy(xpath = "//div[@data-menu-id='62827']//a[@class='menu-burger__link' and text()='Диваны']")
 
     private WebElement sofas;
 

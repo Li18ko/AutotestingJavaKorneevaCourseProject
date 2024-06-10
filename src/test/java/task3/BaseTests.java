@@ -27,8 +27,8 @@ public class BaseTests {
     public void before(){
         driverManager.getDriver().get("https://market.yandex.ru");
         driverManager.getDriver().manage().addCookie(new Cookie("spravka",
-                "dD0xNzE3MzIzODEwO2k9OTUuMjQuMzIuMTY7RD0xMzZDQzk1NTdBNURDMEEzRUE1OUE2QUIwMTY5RTJFMkFDNkJFRDA0QTE3MDU5Q0EyMjg5M0U0NkQyRjNEOTY2NzhDQTczMTRFMEZDQzA1RDA1NUU3RENFOUI1MkJDNEY4MEQ1Qzg4NkIwNzU5QjMzRDc4OUIyMjdEMDIzOEQ0OTc4NzNFOEM4MUU2RUI1NDgyMUM4QzI5RTgwNjdBNDU1QTJDNkMyMTkyNzE4NjNCMTt1PTE3MTczMjM4MTA5NTA4NDk3MTg7aD1mYmY1YjEzMThjNTZlNDdkYjI1YzMwNTNjNTViODUxYg==",
-                ".yandex.ru", "/", new Date(2024, 7, 2, 10, 23, 30)));
+                "dD0xNzE4MDMzOTE3O2k9OTUuMjQuMzIuMTY7RD05RkQ5NzVEMEQxNjdBNTI2NDJBQjkyNTI0NDMxMzkwQTA0NzY5OEY5QTE4MTlEMkEzNjZCMUYwOURFNEVBMjdCMEU3NDlEMzhDRTVCREI3NjI2MTZERjIxNDQzMzQ3MzM1MjA1MTI0MzNCRjQ0NTEyM0I1RUQwQ0M2QjZBRjQyNTNFQ0ZBOTg4OTdFQUVCMDkxQzQxODVENDhFNkJCODRFMDhDRkI2RjhEQjcyMjZEODt1PTE3MTgwMzM5MTczNTk2NzA4MjI7aD02MmJlYzA4YmE3YjM3OTNiZDlkNDgzMDg1MDE3OWI5NQ==",
+                ".yandex.ru", "/", new Date(2024, 7, 10, 15, 38, 37)));
         try{
             Thread.sleep(2000);
         } catch (InterruptedException e) {

@@ -7,7 +7,6 @@ import managers.DriverManager;
 import managers.InitManager;
 import managers.TestPropManager;
 import task1.pages.PageManager;
-import utils.PropsConst;
 
 public class BaseTests {
     private final DriverManager driverManager = DriverManager.getInstance();

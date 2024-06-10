@@ -1,5 +1,4 @@
 package task3.pages;
-import task3.pages.StartPage;
 
 public class PageManager {
     private static PageManager INSTANCE = null;
